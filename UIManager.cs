@@ -62,9 +62,9 @@ public class UIManager : MonoBehaviour
      */
     public void ChangeScreen(int screenId)
     {
-        if (screenId < 0 ||  screenId > screens.Length)
+        if (screenId < 0 ||  screenId >= screens.Length)
         {
-            Debug.Log("Error! Outside the index for Screens, try something between 0 and " + screens.Length);
+            Debug.Log("Error! Outside the index for Screens, try something between 0 and " + (screens.Length - 1));
             return;
         }
 
